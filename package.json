@@ -1,0 +1,23 @@
+{
+  "name": "fhir-validator",
+  "version": "0.1.0",
+  "description": "A validator for resources conforming to the FHIR specification.",
+  "main": "lib/fhir-validator.js",
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arrian/fhir-validator-js.git"
+  },
+  "keywords": [
+    "fhir",
+    "validator"
+  ],
+  "author": "Arrian Purcell",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/arrian/fhir-validator-js/issues"
+  },
+  "homepage": "https://github.com/arrian/fhir-validator-js#readme"
+}
