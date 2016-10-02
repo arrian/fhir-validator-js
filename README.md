@@ -1,12 +1,12 @@
 # Javascript FHIR Validator
 
-A javascript FHIR (www.hl7.org/fhir/) validator for use with json or strings that conform to the FHIR standard.
+A javascript FHIR (www.hl7.org/fhir/) validator for use with json or strings that conform to the FHIR DSTU2 standard.
 
 ## Usage
 
 ### Node
 
-```
+```javascript
 var fhir = require('fhir-validator'),
 	resource,
 	result;
