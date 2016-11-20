@@ -1,6 +1,11 @@
 var assert = require('chai').assert,
 	fhir = require('../lib/fhir-validator'),
-	_ = require('lodash');
+	_ = require('lodash'),
+    util = require('util');
+
+function log(item) {
+    console.log(util.inspect(item, {showHidden: false, depth: null}));
+}
 
 // Sample Resources
 var validMedicationStatements = ['./examples/medicationstatementexample1.json',
@@ -21,7 +26,7 @@ describe('FHIR Validator', function() {
     	_.forEach(validMedicationStatements, function(medicationStatementFile) {
     		medicationStatement = require(medicationStatementFile);
     		result = fhir.validate(medicationStatement, 'MedicationStatement');
-    		console.log(result);
+    		log(result);
     		assert.equal(0, result.errors.length, result.errors);
     	});
     });
