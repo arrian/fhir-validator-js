@@ -3,67 +3,40 @@
   "id": "example005",
   "text": {
     "status": "generated",
-    "div": "<div>\n      <p>Amoxicillin 250mg capsule - one capsule three times daily</p>\n    </div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example005</p><p><b>basedOn</b>: <a>CarePlan/gpvisit</a></p><p><b>context</b>: <a>Encounter/f203</a></p><p><b>status</b>: entered-in-error</p><p><b>medication</b>: Amoxicillin (product) <span>(Details : {SNOMED CT code '27658006' = 'p-Hydroxyampicillin', given as 'Amoxicillin (product)'})</span></p><p><b>effective</b>: 23/01/2014</p><p><b>dateAsserted</b>: 22/02/2015</p><p><b>informationSource</b>: <a>Donald Duck</a></p><p><b>subject</b>: <a>Donald Duck</a></p><p><b>taken</b>: unk</p><p><b>note</b>: Patient indicated that they thought it was Amoxicillin they were taking but it was really Erythromycin</p></div>"
   },
-  "patient": {
-    "reference": "Patient/example"
+  "basedOn": [
+    {
+      "reference": "CarePlan/gpvisit"
+    }
+  ],
+  "context": {
+    "reference": "Encounter/f203"
   },
-  "informationSource": {
-    "reference": "Patient/example"
-  },
-  "dateAsserted": "2015-02-22",
   "status": "entered-in-error",
-  "wasNotTaken": false,
-  "reasonForUseCodeableConcept": {
+  "medicationCodeableConcept": {
     "coding": [
       {
         "system": "http://snomed.info/sct",
-        "code": "65363002",
-        "display": "Otitis Media"
+        "code": "27658006",
+        "display": "Amoxicillin (product)"
       }
     ]
   },
   "effectiveDateTime": "2014-01-23",
-  "note": "Patient indicates they miss the occasional dose",
-  "medicationReference": {
-    "reference": "Medication/MedicationExample6"
+  "dateAsserted": "2015-02-22",
+  "informationSource": {
+    "reference": "Patient/pat1",
+    "display": "Donald Duck"
   },
-  "dosage": [
+  "subject": {
+    "reference": "Patient/pat1",
+    "display": "Donald Duck"
+  },
+  "taken": "unk",
+  "note": [
     {
-      "text": "one capsule three times daily",
-      "timing": {
-        "repeat": {
-          "frequency": 3,
-          "period": 1,
-          "periodUnits": "d"
-        }
-      },
-      "asNeededBoolean": false,
-      "route": {
-        "coding": [
-          {
-            "system": "http://snomed.info/sct",
-            "code": "260548002",
-            "display": "Oral"
-          }
-        ]
-      },
-      "quantityQuantity": {
-        "value": 1
-      },
-      "maxDosePerPeriod": {
-        "numerator": {
-          "value": 3,
-          "unit": "capsules",
-          "system": "http://snomed.info/sct",
-          "code": "385055001"
-        },
-        "denominator": {
-          "value": 1,
-          "system": "http://unitsofmeasure.org",
-          "code": "d"
-        }
-      }
+      "text": "Patient indicated that they thought it was Amoxicillin they were taking but it was really Erythromycin"
     }
   ]
 }
