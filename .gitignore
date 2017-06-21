@@ -1,2 +1,5 @@
 /node_modules
 test/examples-unused
+lib/conformance/0.5.5
+lib/conformance/1.0.2
+lib/conformance/3.0.0/profiles-resources.json
