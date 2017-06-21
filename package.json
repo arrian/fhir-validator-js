@@ -1,6 +1,6 @@
 {
   "name": "fhir-validator",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "A validator for resources conforming to the FHIR specification.",
   "main": "lib/fhir-validator.js",
   "scripts": {
