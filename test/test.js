@@ -46,5 +46,11 @@ describe('FHIR Validator', function() {
     });
   });
 
+  describe('JSON strings', function() {
+    it('should not give errors for valid JSON strings', function () {
+        var result = fhir.validate('{ "resourceType": "Patient" }', 'Patient');
+        assert.equal(0, result.errors.length, result.errors);
+    });
+  });
 
 });
